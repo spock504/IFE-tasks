@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>右侧固定宽度</title>
+</head>
+<body>
+	<p>float</p>
+	<!--父元素设置了宽度、高度-->
+	<div class="container" style="width:100%; height: 100px;"> 
+		<div class="col-r1 right" style="height: 100%;width: 400px; float: right; background-color: #7CAC69; "></div>
+		<div class="col-l1 left" style=" height: 100%; background-color: #CCC;"></div>
+	</div>
+	<p>position</p>
+	<div class="container" style="width: 100%; height: 100px; position: relative;">
+		<div class="col-r2 right" style="width: 400px; height: 100%; position:absolute;right: 0;background-color: #7CAC69;"></div>
+		<div class="col-l2 left" style=" height: 100%; background-color: #CCC;"></div>
+	</div>
+	<p>flexbox</p>
+	<div class="container" style="width: 100%;height: 100px;display: flex;">
+		<div class="col-l3 left" style="height: 100%; flex: 1; background-color: #CCC;"></div>
+		<div class="col-r3 right" style="width: 400px;height: 100%; background-color: #7CAC69;"></div>
+	</div>
+</body>
+</html>
