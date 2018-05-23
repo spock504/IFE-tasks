@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>和页面对话</title>
+</head>
+<body>
+    <input id="name" type="text">    
+    <button id="submit-btn" style="background-color: #ccc">Submit</button>
+
+    <script type="text/javascript">
+    // 当点击按钮 submit-btn 时，在console中输出 name 中的内容
+    // 在输入过程中，如果按回车键，则同样执行上一条的需求
+    // 在输入过程中，如果按 ESC 键，则把输入框中的内容清空
+    var OBtn = document.getElementById("submit-btn");
+    var OIpt = document.getElementById("name");
+    OBtn.onclick = function() {
+        console.log(OIpt.value);
+    }
+    OIpt.onkeydown = function(e) {   //获取输入框的按键状态
+        if (e.keyCode == 13) {
+        console.log(OIpt.value);
+        }
+        if (e.keyCode == 27) {
+        OIpt.value = "";
+        }
+    }
+    </script>
+</body>
+</html>
