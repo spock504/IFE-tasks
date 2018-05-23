@@ -83,6 +83,52 @@
     findAllHtmlSpanInOneSection("news-normal");
     findListItem("news-normal","CSS");
     getActiveLinkContent("news-normal");
+    // querySelector(selectors: DOMString)
+
+    function getAllListItem1() {
+        var alist = document.querySelectorAll("li");
+        console.log(alist);
+        // 返回页面中所有li标签
+    }
+
+    function findAllHtmlSpanInOneSection1(sectionId) {
+        var aspan = document.querySelectorAll("#"+sectionId+" span");
+        var every_span = [];
+        for (var i=0; i<aspan.length; i++){
+            if (aspan[i].innerHTML == "HTML") {
+                every_span.push(aspan[i]);
+            }
+        }
+        console.log(every_span);
+        // 返回某个section下所有span中内容为HTML的span标签
+    }
+
+    function findListItem1(sectionId, spanCont) {
+        var alist = document.querySelectorAll("#"+sectionId+" li");
+        var every_li=[];
+        for (var i=0; i<alist.length; i++){
+            if (alist[i].querySelectorAll("span")[0].innerHTML == spanCont) { //所有span中的第一个
+                every_li.push(alist[i]);
+            }
+        }
+        console.log(every_li);
+        // 返回某个section下，所有所包含span内容为spanCont的LI标签
+    }
+
+    function getActiveLinkContent1(sectionId) {
+        var alist = document.querySelectorAll("#"+sectionId+" a.active");
+        var every_a = [];
+        for (var i=0; i<alist.length; i++){
+            every_a.push(alist[0].innerHTML);  //注意，返回的是对象，内容在子节点中
+        }
+        console.log(every_a);
+        // 返回某个section下，class为active的链接中包含的文字内容
+    }
+    getAllListItem1();
+    findAllHtmlSpanInOneSection1("news-normal");
+    findListItem1("news-normal","CSS");
+    getActiveLinkContent1("news-top");
+
     </script>
 </body>
 </html>
