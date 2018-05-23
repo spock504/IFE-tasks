@@ -21,7 +21,7 @@
 
 ## day20  
 [display](https://spock504.github.io/IFE-2018/day20-21/js-20display.html)  
-[talk](https://spock504.github.io/IFE-2018/day20-21/js-20talk.htmll)   
+[talk](https://spock504.github.io/IFE-2018/day20-21/js-20talk.htmll)  
 [color](https://spock504.github.io/IFE-2018/day20-21/js-20-3color.html)  
 [time](https://spock504.github.io/IFE-2018/day20-21/js-20-4time.html)  
 [帧img](https://spock504.github.io/IFE-2018/day20-21/js-20-5img.html)  
