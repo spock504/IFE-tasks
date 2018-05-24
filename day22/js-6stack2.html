@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栈</title>
+</head>
+<body>
+<div class="btn">
+    <input id="stack-input" type="text">
+    <p id="stack-cont">栈内容：apple&gt;-pear</p>    
+    <button id="push-btn">进栈</button>
+    <button id="pop-btn">退栈</button>
+    <button id="font-btn">打印栈顶元素内容</button>
+    <button id="empty-btn">判断栈是否为空</button>
+</div>
+<script>
+// 头部在左侧
+    var stack = ["apple", "pear"];
+    var text = document.querySelector("#stack-cont");
+    var btn = document.querySelector(".btn");
+    // 添加事件委托
+    btn.onclick = function (e) {
+        var ev = e || window.event;
+        var target = ev.target || ev.srcElement;
+        var input = document.querySelector("#stack-input").value;
+        switch (target.id) {
+            // 入列
+            case "push-btn":
+            if (input !== '') {
+                stack.unshift(input);
+                text.innerHTML =`栈为 ${stack.join('<-')}`;
+            } else  {
+                text.innerHTML = "输入不能为空";
+            }
+                break;
+                // 出列
+            case "pop-btn":
+                stack.shift();
+                text.innerHTML =`栈为 ${stack.join('<-')}`;
+                // statements_def
+                break;
+                // 列头
+            case "font-btn":
+                text.innerHTML = `栈头为 ${stack[0]}`;
+                break;
+                // 检查是否为空
+            case "empty-btn":
+                var empty = stack.length === 0 ? "栈为空" : "栈不为空";
+                text.innerHTML = empty;
+                break;
+        }
+    }
+
+</script>
+
+</body>
+</html>
