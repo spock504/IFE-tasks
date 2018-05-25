@@ -11,9 +11,12 @@ function Go() {
 }
 //传入的参数是不是数字，是不是正整数
 function GoSteps(n) {
+    // 缺少参数默认执行一次Go()
     if (n === undefined) return Go();
-    if (n>0) {
+    if (n > 0) {
+        // 向下取整
         n=Math.floor(n);
+        // 循环触发
         while (n--) {
             Go();
         }
