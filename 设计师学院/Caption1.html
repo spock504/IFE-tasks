@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作一个简单的菜单动画效果</title>
+    <style type="text/css">
+        #animate1 {
+            margin: 20px auto;
+            padding-bottom: 10px;
+            text-align: center;
+            width: 80px;
+            transition: border 1s;
+        }
+        #animate1:hover {
+            border-bottom: 2px solid #29b6f6;
+        }
+        #animate2 {
+            margin: 20px auto;
+            padding-bottom: 10px;
+            text-align: center;
+            width: 100px;
+            /* 为了给底下的边框定位 */
+            position: relative;     
+        }
+        #animate2::before,
+        #animate2::after {
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: 0;
+            background-color: #29b6f6;
+            top: 100%;
+            left: 50%;
+            transition: all 0.8s;
+        }
+        #animate2:hover::before {
+            left: 0;
+            width: 50%;
+        }
+        #animate2:hover::after {
+            right: 0;
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    
+<p id="animate1">动画 啊</p>
+<p id="animate2">real animate</p>
+
+</body>
+</html>
