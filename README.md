@@ -5,8 +5,9 @@
 [两栏-左侧固定宽度](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day7-8/两栏-左侧固定宽度.html)  
 [两栏-左右两边固定宽度](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day7-8/两栏-左右两边固定宽度.html)  
 [三栏-左右固定宽度](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day7-8/三栏-左右固定宽度.html)  
-[三栏-左右固定宽](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day7-8/三栏-左中固定宽度.html)  
-##2.  day12
+[三栏-左右固定宽](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day7-8/三栏-左中固定宽度.html)   
+
+## 2.  day12
 > [复杂页面的实现](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day12-15/index.html)  
 
 ## 3. day 16  
@@ -19,7 +20,7 @@
 ## 4. day 19  
 >[找到那个DOM](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day19/找到那个DOM.html)  
 
-##5.  day 20  
+## 5.  day 20  
 > [display](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day20-21/js-20display.html)  
 [talk](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day20-21/js-20talk.htmll)  
 [color](https://github.com/spock504/IFE-tasks/tree/master/2018-IFE/零基础学院/day20-21/js-20-3color.html)  
