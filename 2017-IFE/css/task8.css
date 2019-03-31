@@ -1,0 +1,62 @@
+.grid-container {
+	width: 100%;
+	max-width: 1200px;
+}
+/*所有元素都是border-box盒子模型*/
+.grid-container *{
+	box-sizing: border-box;
+}
+/*清除两边浮动，防止溢出到其他行*/
+.row::before,.row::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+.outline,.outline div{
+	border: 1px solid #F6A1A1;
+}
+
+[class*="col-"] {
+	float: left;
+	min-height: 1px;
+	padding: 10px;
+	width: 8.33%;
+	background-color: #FFDCDC;
+	margin: 10px;
+}
+[class*="col-"] p {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+@media all and (min-width:769px ){
+.col-1 {width:calc(8.33% - 20px);}
+.col-2 {width:calc(16.66% - 20px);}
+.col-3 {width:calc(25% - 20px);}
+.col-4 {width:calc(33.33% - 20px);}
+.col-5 {width:calc(41.67% - 20px);}
+.col-6 {width:calc(50% - 20px);}
+.col-7 {width:calc(58.33% - 20px);}
+.col-8 {width:calc(66.66% - 20px);}
+.col-9 {width:calc(75% - 20px);}
+.col-10 {width:calc(83.33% - 20px);}
+.col-11 {width:calc(91.67% - 20px);}
+.col-12 {width:calc(100% - 20px);}
+}
+@media all and (max-width:768px ){
+.col-1 {width:calc(25% - 20px);}
+.col-2 {width:calc(50% - 20px);}
+.col-3 {width:calc(75% - 20px);}
+.col-4 {width:calc(100% - 20px);}
+.col-5 {width:calc(100% - 20px);}
+.col-6 {width:calc(100% - 20px);}
+.col-7 {width:calc(100% - 20px);}
+.col-8 {width:calc(100% - 20px);}
+.col-9 {width:calc(100% - 20px);}
+.col-10 {width:calc(100% - 20px);}
+.col-11 {width:calc(100% - 20px);}
+.col-12 {width:calc(100% - 20px);}
+}
+
+

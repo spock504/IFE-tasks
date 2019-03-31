@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三栏式布局</title>
+<style type="text/css">
+  * { 
+    padding: 0; 
+    margin: 0; 
+   }
+/*float分布布局,已知左右两边的宽、高，中间的按内容分布*/
+div.box1 { 
+    min-width: 500px; 
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #999;
+    background-color: #eee;
+    overflow: auto; /*当内容溢出其块级容器时,显示滚动条*/
+}
+div.box-left1 { 
+    float: left; /*左边栏定位*/
+    width: 160px; 
+    height: 80px;
+    border: 1px solid #999; 
+    background-color: white;
+    padding: 20px;
+}
+div.logo1 { 
+  border: 1px solid #999;
+  background-color: #eee;
+  width: 80px;
+  height: 80px;
+  float: left; 
+}
+
+div.box-left1 p { 
+  float: right;
+}
+
+div.box-right1 { 
+  float: right;   /*右边栏定位*/
+  border: 1px solid #999;
+  background-color: white;
+  padding: 20px;
+  width: 80px;
+ }
+div.plogo1 { 
+  border: 1px solid #999;
+  background-color: #eee;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+ }
+
+div.lastplogo1 { 
+  border: 1px solid #999;
+  background-color: #eee;
+  width: 80px;
+  height: 80px;
+ }
+
+div.center { 
+  border: 1px solid #999;
+  background-color: white; 
+  margin-left: 220px;
+  margin-right: 140px;
+  padding: 20px;
+ }
+
+/*position 定位分布布局*/
+div.box2 { 
+  min-width: 500px;
+  position: relative;
+  background-color: #eee;
+  border: 1px solid #999;
+  margin: 20px;
+  padding: 20px;
+  overflow: auto;
+ }
+div.box-left2 { 
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 160px;
+  height: 80px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #999;
+}
+div.box-left2 p { 
+  float: right;
+ }
+div.box-right2 { 
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: white;
+  border: 1px solid #999;
+  padding: 20px;
+  width: 80px;
+ }
+</style>
+
+</head>
+<body>
+  <div class="box1">   <!--这有个未解释的现象，为什么要把center的div放在后面，才能够让right1水平方向上正常显示?-->
+    <div class="box-left1">
+      <div class="logo1">
+        团队logo80*80
+      </div>
+      <p>团队名称</p>
+    </div>
+    <div class="box-right1">
+      <div class="plogo1">
+        <p>个人logo80*80</p>
+      </div>
+      <div class="plogo1">
+        <p>个人logo80*80</p>
+      </div>
+      <div class="plogo1">
+        <p>个人logo80*80</p>
+      </div>
+      <div class="lastplogo1">
+        <p>个人logo80*80</p>
+      </div>
+    </div>
+    <div class="center">
+      团队的力量，个人魅力。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。
+    </div>
+  </div>
+  
+  <div class="box2">
+    <div class="box-left2">
+      <div class="logo1">
+        团队logo80*80
+      </div>
+      <p>团队名称</p>
+    </div>
+    <div class="center">
+      团队的力量，个人魅力。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。很多介绍很多。
+    </div>
+    <div class="box-right2">
+      <div class="plogo1">
+        <p>个人logo80*80</p>
+      </div>
+      <div class="plogo1">
+        <p>个人logo80*80</p>
+      </div>
+      <div class="plogo1">
+        <p>个人logo80*80</p>
+      </div>
+      <div class="lastplogo1">
+        <p>个人logo80*80</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

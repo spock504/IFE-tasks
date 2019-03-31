@@ -1,0 +1,303 @@
+	* { 
+        margin: 0;
+        padding: 0;
+	   }
+	div.main { 
+      margin: 0 auto;
+      width: 892px;
+      height: 100%;
+	 }
+    header { 
+      width: 892px;
+      height: 63px;
+      border-bottom: 2px solid #938e8c;
+     }
+    div.bgimage1 { 
+      float: left; /*头部两个div用float进行排布,文字用margin-top进行对齐*/
+      background-color: red;
+      width: 110px;
+      height: 63px;
+      text-align: center;
+     }
+    div.bgimage1 p{ 
+      font: 12px "黑体";
+      color: #FFFFFF;
+      margin-top: 50px;
+      }
+     div.time p { 
+        margin-top: 50px;
+        float: right;
+        font: 12px '黑体';
+        color: #d45d5c;
+        }
+      /*怎么在图片上方设置半透明框呢？利用position，脱离文档流*/
+      div.content-left1 { 
+      	float: left;
+        position: relative;
+        margin-top: 30px;
+       }
+      div.content-left1 img { 
+        width: 641px;
+        height: 301px;
+       }
+
+      div.left-img { 
+      position: absolute;
+      width: 191px;
+      height: 301px;
+      background-color: green;
+      opacity: 0.5;
+      left: 0;
+      top: 0;
+      }
+      div.right-img { 
+        position: absolute;
+        width: 191px;
+        height: 301px;
+        background-color: red;
+        opacity: 0.5;
+        right: 0;
+        top: 0;
+      }
+      div.content-right1 { 
+        width: 203px;
+        height: 289px;
+        float: right;
+        border-top: 2px solid #cc8091;
+        margin-left: 45px;
+        margin-top: 30px;
+        padding-top: 10px;
+      }
+      div.content-right1 p.about,p.technologe { 
+        font: 24px "微软雅黑";
+        color: #000000;
+        margin-bottom: 10px;
+        text-decoration: underline;
+      }
+      p.desc-technologe { 
+        font: 12px "楷体";
+        color: #676767;
+        margin-bottom: 10px;
+      }
+      p.big-number { 
+        font: 116px "微软雅黑";
+        color: #75b86b;
+        font-style: italic;
+      }
+      p.small-number { 
+        font: 55px "微软雅黑";
+        color: #cc8091;
+        float: left;
+       }
+      div.sup-number { 
+        margin-top: 20px;
+        color: #cc8091;
+      }
+      div.sup-number p:nth-child(1) { 
+        font: 21px "微软雅黑";
+      }
+      div.sup-number p:last-child { 
+        font: 12px "微软雅黑";
+      }
+
+      div.content-left2 { 
+        float: left;
+        width:240px;
+        margin-right: 20px;
+      }
+      div.content-left2 p { 
+        font: 16px;
+        color: green;
+        text-decoration: underline;
+       }
+       div.text { 
+        margin-top: 15px;
+        font: 12px "微软雅黑";
+        color: #231815;
+        line-height: 16px;
+        opacity: 0.7;
+        }
+      div.content-center2 { 
+        float: left;
+        width: 180px;
+       }
+      div.content-center2 p { 
+        font: 16px bold; 
+        color: #d2994f;
+        text-decoration: underline;
+        }
+      div.content-right2 { 
+        float: left;
+        width: 180px;
+        margin-left: 20px;
+      }
+      div.content-right2 p {
+        font: 16px solid;
+        text-decoration: underline;
+        color: #cc7680;
+      }
+      div.content ul {
+      margin-top: 30px;
+      }
+      div.content ul li {
+      	font: 12px "微软雅黑";
+      	line-height: 16px;
+      	font-style: italic;
+      	opacity: 0.7;
+      	list-style: none;
+      }
+      div.content ul li span {
+      	color: #cd4a48;
+      }
+      div.part1 { 
+       float: left;
+       width: 418px;
+       margin-top: 20px;
+       text-align: justify;
+      }
+      div.title1 { 
+       border-bottom: 2px solid #11456b;
+       padding-bottom: 10px;
+       }
+      div.title1 h1 { 
+        font: bold 42px "黑体";
+        color: #11456b;
+        line-height: 16px;
+      }
+      div.title1 h1 span{ 
+        font: italic bold 72px "黑体" ; /*一定要注意font的顺序*/
+        color: #f5e327;
+      }
+      div.title1 h2 { 
+        font: 33px "黑体" bold;
+        color: #11456b;
+        margin-top: 20px;
+      }
+      div.content2 .one:first-letter{ 
+        font: 70px "微软雅黑";
+        color: #f5e327;
+        float: left;
+        margin-top: -15px;
+      }
+      /*第二个p元素空两格开始书写*/
+      p.one~p { 
+        text-indent: 2em;
+       }
+      div.content2 p {  
+        font: 12px "宋体";
+        color: #767777;
+        line-height: 16px;
+        margin-top: 15px;
+      }
+      /*文字环绕图片，可以将图片设置为float:right; */
+      div.content2 img { 
+        float: right;
+        margin: 0 0 15px 15px ;
+      }
+      div.part2 { 
+      float: right;
+      width: 458px;
+      height: 275px;
+      margin-top: 20px;
+      position: relative;
+      }
+      div.cover { 
+        position: absolute;
+        width: 458px;
+        height: 61px;
+        background-color: rgb(0,0,0,);
+        opacity: 0.7;
+        left: 0;
+        bottom: 74px;  /*这个地方不明白*/
+        z-index: 1;
+      }
+      div.font { 
+      	height: 44px;
+      	margin-top: 10px;
+        line-height: 44px;
+        border-left: 3px solid #72b16a;
+        margin-left: 30px;
+        padding-left: 10px;
+      }
+      div.font p span { 
+        font: 26px "微软雅黑";
+        color: #ffffff;
+      }
+      div.font p { 
+        font: italic 12px "微软雅黑";
+        word-spacing: 140%;
+        color: #72b16a;
+      }
+      div.content3 { 
+        float: right;
+        width: 459px;
+        height: 308px;
+        background-color: moccasin;
+        position: relative;
+        margin-top: -60px;
+      }
+      .list {
+      	margin-top: 30px;
+      	margin-left: 40px;
+      }
+      .list ul li {
+      	font: 16px "宋体";
+      	text-align: right;
+      	color: #5a5b5b;
+      	margin-right: 20px;
+      	margin-bottom: 20px;
+      	list-style-type:none; 
+      }
+      div.zero {
+      	background-color: #EE6A50;
+      	width: 260px;
+      	height: 160px;
+      	float: left;
+      	position: absolute;
+      	left: 0;
+      	bottom: 0;
+      	color: #ffffff;
+      }
+      div.zero h1 {
+      	float: left;
+      	font: 110px "微软雅黑";
+      	color: #ffffff;
+      	margin-left: 10px;
+      	margin-top: 10px;
+      }
+      div.zero p {
+      	float: left;
+      	width: 170px;/*默认的元素太大了，不然看不见*/
+      	height: 86px;
+      	font: 12px "黑体";
+      	color: #ffffff;
+      	margin: 40px 0px 0px 5px;
+      	padding-left: 5px;
+      	border-left: 3px solid #ffffff;
+      }
+      div.zero p span {
+      	font:italic 21px "黑体";
+      }
+      div.cite {
+      	width: 180px;
+      	height: 86px;
+      	float: right;
+      }
+      div.cite p span {
+      	font: 42px "黑体";
+      	color: #d45d5c;
+      }
+      div.cite p {
+      	font: italic 14px "黑体";
+      	color: #5a5b5b;
+      }
+      footer {
+      	width: 892px;
+      	border-top: 1px solid #938e8c;
+      	color: #d45d5c;
+      	font: 12px "黑体";
+      	margin-top: 20px;
+      }
+      .footer-text {
+      	float: right;
+      }

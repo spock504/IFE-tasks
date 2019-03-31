@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左右两边固定宽度</title>
+	<style type="text/css">
+		.container {
+			margin-top: 30px;
+			height: 100px;
+			width: 100%;
+			position: relative;
+		}
+		.left {
+			background-color: #CCC;
+			width: 30%;
+			height: 100%;
+		}
+		.right {
+			background-color: #7CAC69;
+			width: 70%;
+			height: 100%;
+		}
+		.col-l1 {
+			float: left;
+		}
+		.col-r1 {
+			float: left;
+		}
+		.col-l2 {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		.col-r2 {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		.flex1 {
+			display: flex;
+		}
+	</style>
+</head>
+<body>
+	<p>float</p>
+	<div class="container">
+		<div class="col-l1 left"></div>
+		<div class="col-r1 right"></div>
+	</div>
+	<p>position</p>
+	<div class="container">
+		<div class="col-l2 left"></div>
+		<div class="col-r2 right"></div>
+	</div>
+	<p>flexbox</p>
+	<div class="container flex1">
+		<div class="col-l3 left"></div>
+		<div class="col-r3 right"></div>
+	</div>
+</body>
+</html>

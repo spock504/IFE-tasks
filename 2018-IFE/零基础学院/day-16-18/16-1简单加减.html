@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <input id="first-number" type="number" value="2" placeholder="第一个数字">
+    <input id="second-number" type="number" value="3" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+            let num1 = document.getElementById("first-number");
+            let num2 = document.getElementById("second-number");
+            let oResult = document.getElementById("result");
+            let oAdd = document.getElementById("add-btn");
+            let oMinus = document.getElementById("minus-btn");
+            let oTimes = document.getElementById("times-btn");
+            let oDivide = document.getElementById("divide-btn");
+            function num () {
+                anum1 = parseInt(num1.value);//value 的取值不能在前面let时定义。 
+                anum2 = parseInt(num2.value);
+            };
+            oAdd.onclick = function() {
+                num();
+                oResult.innerHTML = anum1 + anum2;
+            };
+            oMinus.onclick = function() {
+                num();
+                oResult.innerHTML = anum1 - anum2;
+            };
+            oTimes.onclick = function() {
+                num();
+                oResult.innerHTML = anum1 * anum2;
+            };
+            oDivide.onclick = function() {
+                num();
+                if (anum2 === 0) {
+                    alert("除数不能是0！");
+                }
+                oResult.innerHTML = anum1 / anum2;
+            };
+
+
+    </script>
+</body>
+</html>

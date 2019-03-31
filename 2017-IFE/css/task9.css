@@ -1,0 +1,684 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-color: #222;
+	font: 14px "微软雅黑";
+}
+
+div {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+textarea {
+	resize: none;
+}
+fieldset {
+	border: none;
+}
+fieldset legend {
+	display: none;
+}
+
+caption {
+	display: none;
+}
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after {
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+  content: ",";
+}
+
+
+.main {
+	width: 1280px;
+	margin: 0 auto;
+}
+header {
+	width: 100%;
+	height: 52px;
+	background-color: #2189bf;
+}
+header .logo {
+	font: 1.2em "微软雅黑";
+	color: #fff;
+	display: inline-block;
+	padding: 10px 56px;
+	cursor: pointer;
+}
+header .search-login {
+	float: right;
+	padding: 10px 20px;
+
+}
+header .search {
+	display: inline-block;
+	margin-right: 30px;
+}
+header .search a {
+	font: bold 18px "黑体";
+	color: #222;
+}
+
+header .search input {
+	width: 130px;
+	height: 25px;
+	border-radius: 18px;
+	border: none;
+	-webkit-transition: width .2s ease-out;
+	transition: width .2s ease-out;
+}
+header .search input:focus {
+	width: 180px;
+}
+header .login{
+	font: 18px "微软雅黑";
+	color: #fff;
+	margin-right: 56px;
+} 
+.list-info {
+	float: left;
+	width: 260px;
+	color: #CCCCCC;
+	background-color: #2a2e3d;
+	text-align: center;
+}
+
+aisde .list-top {
+	font-size: 16px;
+}
+
+aside .pic {
+	margin: 20px;
+	border: 1px solid #fff;
+	display: inline-block;   /*使用了内联块，能够设置大小*/
+	height: 57px;
+	width: 57px;
+	border-radius: 50%;
+	background: url('../image/2.jpg') no-repeat center;
+	background-size: cover;   /*图片在圆圈内显示*/
+	transition: transform 2s ease-out;
+}
+aside .pic:hover {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg)
+}
+aside .list-top span {
+	display: inline-block;
+	float: right;
+	margin: 35px;
+}
+aside .list-top span {
+	font-size: 16px;
+}
+aside .collect-fans {
+	margin: 35px 20px;
+}
+
+/*-------两个span的元素两行排列*/
+aside .list-info .collect-fans {
+	margin: 21px 0 21px 30px;
+}
+aside .collect-fans .num {
+	font-size: 20px;
+}
+aside .list-info .collect-fans a {
+	float: left;
+	width: 28px;
+	height: 30px;
+	padding: 0 31px;
+	color: #6e8095;
+}
+aside .list-info .collect-fans a:first-child {
+	border-right: 2px solid #323647;
+}
+
+/*第一个子元素li的样式*/
+aside .lists > li {
+	margin-bottom: 35px;
+}
+/*设置侧边栏文字的颜色*/
+aside .lists > li a {
+	color: #6e8095;
+}
+
+aside .lists > li:first-child {
+	background-color: #393d4e;
+	padding: 15px 0;
+	margin-bottom: 20px;
+}
+/*------个人报表字体变白*/
+aside .lists > li:first-child > a {
+	color: #ededef;
+}
+
+aside .lists > li:first-child > ul {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+aside .lists > li:first-child > ul li {
+	padding: 10px 0;
+}
+aside .lists >li:first-child > ul > li:nth-child(2) > a {
+	color: #ededef;
+}
+aside .lists >li:first-child > ul > li:nth-child(2) ul {
+	margin-left: 20px;
+}
+aside .lists >li:first-child > ul > li:nth-child(2) ul li:first-child a{
+	color: #ededef;
+}
+/*--------------右边的样式--------*/
+article .detail{
+	height: 1200px;
+	margin-left: 260px;
+	background-color: #ccc;
+}
+article nav {
+	padding-left: 20px;
+	background-color: #fff;
+	height: 30px;
+}
+
+article nav ul li { /*为了让边框能够倾斜一定角度*/
+	float: left;
+	margin: 5px 0;
+	-webkit-transform: skewX(-10deg);
+	-ms-transform: skewX(-10deg);
+	transform: skewX(-10deg);
+	border-right: 1px solid #aaa;
+}
+article nav ul li a {
+	display: inline-block;
+	padding: 0 15px;
+	color: #aaa;
+	-webkit-transform: skewX(10deg);
+	-ms-transform: skewX(10deg);
+	transform: skewX(10deg);
+}
+article nav ul li:last-child {
+	border: none;
+}
+article nav ul li:last-child a {
+	color: #6898c2;
+}
+/*--------搜索项------*/
+.info {
+	width: 980px;
+	height:115px;
+	background-color: #fff;
+	margin: 20px auto;
+	padding: 10px;
+	color: #aaa;
+	border: 1px solid #ddd;
+}
+.info .search-form select, .search-form input[type="text"] {
+	border: 1px solid #aaa;
+	padding-left: 10px;
+	margin-left: 15px;
+	vertical-align: middle;
+}
+.search-form .search-item, .search-form .buy-sell, .search-form .other {
+	float: left;
+	margin-right: 30px;
+}
+.search-item {
+	margin: 10px 20px;
+}
+.search-form .search-item select {
+	width: 75px;
+	height: 25px;
+}
+.buy-sell {
+	margin: 10px 20px;
+}
+.buy-sell .buy {
+	margin-bottom: 10px;
+}
+.search-form .buy-sell select {
+	width: 125px;
+	height: 25px;
+}
+.search-form .other {
+	width: 450px;
+}
+.search-form .other .date, .other .time, .other .people, .other .deal {
+	float: left;
+	margin-top: 5px;
+}
+.other .deal  {
+	margin-left: 35px;
+}
+.other .time {
+	margin-left: 40px;
+}
+.other .date input[type="text"] {
+	width: 110px;
+	height: 25px;
+}
+.other .time select, .other .people select, .other .deal select{
+	width: 125px;
+	height: 25px;
+	margin-bottom: 10px;
+}
+.search-form .button {
+	float: left;
+	margin-top: 25px;
+}
+.search-form .button input{
+	width: 50px;
+	height: 26px;
+	color: #fff;
+	background-color: #388ac1;
+	cursor: pointer;
+	border: none;
+}
+.time-money-history {
+	width: 980px;
+	height: 65px;
+	margin: 30px auto;
+}
+/* 设置列表前后的两个图块 */
+.time-money::before, .time-money::after {
+	float: left;
+	width: 30px;
+	height:65px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid #ddd;
+	content: " ";   /*内容要为空*/
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.time-money .item{
+	float: left;
+	width: 85px;
+	height: 65px;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin-left: 20px;
+	box-sizing: border-box;
+	padding-top: 10px;
+	background-color: #fff;
+}
+/* 注意文件路径的书写方式 */
+.time-money-history .time-money::before {
+  background: #fff url(../image/left.png) no-repeat center/14px 20px;
+}
+.time-money-history .time-money::after {
+  background: #fff url(../image/1.jpg) no-repeat center/14px 20px;
+}
+.time-money-history .item p {
+	color: #aaa;
+}
+.time-money-history .item p:first-child {
+	color: #323333;
+	margin: 5px 0;
+	font-size: 0.8em;
+}
+.time-money-history .item p:last-child span{
+	color: #ec6500;
+	font-size: 1.2em;
+}
+.time-money-history .active, .time-money-history .item:hover {
+	border-top: 2px solid  #4389c9;
+}
+
+.time-money-history .history {
+	float: right;
+	width: 125px;
+	height: 55px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	text-align: center;
+	margin-right: 60px;
+	margin-top: 5px;
+}
+.time-money-history .history a {
+	height: 100%;
+	width: 100%;
+	line-height: 55px;
+	color: #535353;
+}
+
+/* 成交量 */
+.count > p {
+	color: #000;
+	margin-bottom: 15px;
+}
+.count .statistics {
+	width: 980px;
+	height: 75px;
+}
+.count .statistics ul li {
+	float: left;
+	width: 207px;
+	height: 72px;
+	border: 1px solid #ddd;
+	margin-left: 28px;
+	position: relative;
+	background-color: #fff;
+
+}
+.count .statistics ul li::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3px;
+	height: 100%;
+	content: " ";
+}
+.count .statistics ul li::after {
+	position: absolute;
+	right: 15px;
+	top: 12px;
+	width: 61px;
+	height: 47px;
+	content: " ";
+}
+.count .statistics ul li:nth-child(1)::before, .count .statistics ul li:nth-child(1)::after {
+	background-color: #43b29e;
+}
+.count .statistics ul li:nth-child(2)::before, .count .statistics ul li:nth-child(2)::after {
+	background-color: #388ac1;
+}
+.count .statistics ul li:nth-child(3)::before, .count .statistics ul li:nth-child(3)::after {
+	background-color: #d04a36;
+}
+.count .statistics ul li:nth-child(4)::before, .count .statistics ul li:nth-child(4)::after {
+	background-color: #e2cd46;
+}
+.count ul li .num {
+	color: #323333;
+	margin: 10px 0 10px 20px;
+}
+.count ul li .trade {
+	color: #aaa;
+	margin-left: 20px;
+	font-size: 10px;
+}
+
+/* 第一个项目 */
+
+.first-item {
+	margin-top: 20px;
+	width: 980px;
+}
+.meterial {
+	float: left;
+	width: 500px;
+	height: 380px;
+	border: 1px solid #f4f5f6;
+	color: #aaa;
+	border-radius: 5px;
+	background-color: #fff;
+}
+.meterial p {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	background-color: #f4f5f6;
+	border-bottom: 1px solid #e7e8eb;
+}
+.meterial .test-box {
+	width: 490px;
+	position: relative;
+}
+.meterial .test-box .test-tab {
+	float: left;
+	width: 86px;
+	height: 27px;
+	margin-right: 3px;	
+}
+/* 项目一单元格的样式 */
+.meterial .test-box .test-tab .test-label {
+	background-color: #ededf0;
+	color: #535353;
+	display: block;
+	width: 86px;
+	height: 27px;
+	text-align: center;
+	font: 1em "微软雅黑";
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	box-sizing: border-box;
+	line-height: 25px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+/* 把单选框跟内容都丢出去 */
+.meterial .test-box .test-radio, .meterial .test-box .test-tab-content {
+	position: absolute;
+	left: -999em;
+}
+/* 对应的单选框点击后匹配相应的内容和列表，这个 ~ 意味深长啊 */
+.meterial .test-tab .test-radio:checked ~ .test-tab-content {
+	margin-top: 1px;
+	border: 1px solid #ccc;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+.meterial .test-box .test-radio:checked ~ .test-label {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+}
+.meterial .test-box .test-tab .test-tab-content {
+	width: 490px;
+	height: 256px;
+	border: 1px solid #cbcbcb;
+	text-align: center;
+	margin-left: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.meterial .test-box table {
+	width: 404px;
+	margin: 28px auto;
+	border-collapse: collapse;
+}
+.meterial .test-box table td {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+
+/* 项目描述 */
+.first-item .summery {
+	float: right;
+	width: 450px;
+	height: 380px;
+	background-color: #fff;
+	color: #aaa;
+	border-radius: 5px;
+	border: 1px solid #d8d8db;
+}
+.summery p {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	background-color: #f4f5f6;
+	border-bottom: 1px solid #e7e8eb;
+}
+.summery form {
+	width: 280px;
+	margin: 0 auto;
+}
+.summery form .title {
+	margin-top: 17px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.summery form input {
+	padding: 4px;
+}
+.summery form input[type="text"],.summery form textarea {
+	width: 100%;
+	padding: 7px 0 10px 16px;
+	color: #535353;
+	border: none;
+}
+
+.summery form .price {
+	padding: 5px 20px;
+	float: left;
+	width: 90px;
+	border-right: 1px solid #e7e7e7;
+}
+.summery form .director {
+	padding: 5px;
+	float: left;
+	width: 185px;
+}
+.summery form .description {
+	padding-top: 5px;
+	clear: both;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+.summery form textarea {
+	width: 100%;
+	height: 80px;
+}
+.summery form .search {
+	margin-top: 10px;
+}
+.summery form .search .agreement {
+	float: left;
+}
+.summery form .search input[type="checkbox"] {
+	width: 14px;
+	height: 14px;
+	border: none;
+	vertical-align: middle;
+	background-color: #d6d6d6;
+}
+.summery form .search input[type="button"] {
+	float: right;
+	width: 50px;
+	height: 25px;
+	color: #fff;
+	background-color: #388ac1;
+	vertical-align: middle;
+	cursor: pointer;
+	border: none;
+}
+
+/* 日历 */
+.calendar-list {
+	float: left;
+	width: 400px;
+	height: 380px;
+	border: 1px solid #e7e8ed;
+	color: #aaa;
+	background-color: #fff;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+.calendar-list > p {
+	height: 45px;
+	width: 100%;
+	line-height: 45px;
+	padding-left: 10px;
+	background-color: #f4f5f6;
+	box-sizing: border-box;
+}
+.calendar-op div {
+	display: inline-block;
+	margin-left:25px; 
+	margin-top: 5px;
+	width: 65px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #bbb;
+}
+.calendar-list .date-table table {
+	width: 350px;
+	height: 250px;
+	border-top: 1px solid #00FFFF;
+	margin: 20px auto;
+}
+.calendar-list .date-table table tr{
+	height: 30px;
+}
+.calendar-list .date-table table  td {
+	color: #aaa;
+	height: 41px;
+	text-align: center;
+}
+
+.calendar-list .date-table table td a {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 7px 0 6px;
+}
+.calendar-list .date-table table td:hover {
+	border: 1px solid #f7d463;
+}
+.calendar-list .date-table table td p {
+	color: #3B3B3B;
+}
+.calendar-list .date-table table .jr, .calendar-list .date-table table .zm {
+	color: #EE2C2C;
+}
+
+/* 右边的商标 */
+.brand {
+	float: right;
+	margin-top: 20px;
+	width: 500px;
+	height: 380px;
+	border: 1px solid #e7e8ed;
+	border-radius: 5px;
+	background-color: #fff;
+}
+.brand > p {
+	height: 45px;
+	line-height: 45px;
+	padding-left: 15px;
+	background-color: #f4f5f6;
+	box-sizing: border-box;
+}
+.brand table {
+	width: 450px;
+	border: 1px solid #c9caca;
+	border-collapse: collapse;
+	margin: 20px auto;
+}
+.brand table th:nth-child(1){
+	width: 65px;
+}
+.brand table th:nth-child(2){
+	width: 95px;
+}
+.brand table th,.brand table td {
+	text-align: center;
+	height: 25px;
+	border: 1px solid #c9caca;
+}
+.brand table tr:hover {
+	background-color: #f4f5f6;
+}
+
+

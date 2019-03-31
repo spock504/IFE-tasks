@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>实现常见的页面架构及样式布局</title>
+	<link rel="stylesheet" href="./css/task7.css">
+</head>
+<body>
+<div class="main">
+	<nav>
+		<div class="new-world">新世界</div>
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">最新活动</a></li>
+			<li><a href="#">项目介绍</a></li>
+			<li><a href="#">爱心社区</a></li>
+			<li><a href="#">关于我们</a></li>
+			<li><a>登录</a></li>
+		</ul>
+	</nav>
+	<section class="bg_image">
+		<img src="./image/4.jpg" alt="Time of new life"/>
+		<a href="#" class="bg_but">开始体验</a>
+		<div class="list">
+			<ul>
+				<li class="first_child">打造全新世界观，让你更爱你的生活</li>
+				<li>丰富多彩的公益活动，发挥新世界大的主人公意识</li>
+				<li>时尚的理念</li>
+				<li>完善的培养机制</li>
+			</ul>
+		</div>
+	</section>
+	<section class="grey">
+		<div class="gray_content">
+			<h3>新世界，你还有什么不知道？</h3>
+		</div>
+	</section>
+	<section class="city">
+		<div class="city_form">
+			<ul>
+				<li>
+					<span>中国</span>
+					<div class="city-list">
+						<a href="#">美国</a>
+						<a href="#">日本</a>
+						<a href="#">英国</a>
+						<a href="#">法国</a>
+						<a href="#">德国</a>
+					</div>
+				</li>
+				<li>
+					<span>省份</span>
+					<div class="city-list">
+						<a href="#">广东</a>
+						<a href="#">福建</a>
+						<a href="#">浙江</a>
+						<a href="#">上海市</a>
+						<a href="#">北京市</a>
+					</div>
+				</li>
+				<li>
+					<span>城市</span>
+				</li>
+				<li id="input_btn">搜索</li>
+			</ul>
+		</div>
+	</section>
+	<section class="activity">
+		<div class="activity_content">
+			<ul>
+				<li>
+					<div class="activity_img"></div>
+					<h3>北京活动</h3>
+					<p>新社区大联盟</p>
+				</li>
+				<li>
+					<h3 class="activity_s">上海活动</h3>
+					<p>夜上海夜上海</p>
+					<div class="activity_img"></div>
+				</li>
+				<li>
+					<div class="activity_img"></div>
+					<h3>深圳活动</h3>
+					<p>全新海岸线</p>
+				</li>
+				<li>
+					<div class="activity_img"></div>
+					<h3>香港活动</h3>
+					<p>奢侈消费大派送</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="newWorld">
+		<div class="newWorld_content">
+			<div class="new_left"></div>
+			<div class="new_right">
+				<h3>新世界/<span>01</span></h3>
+				<p>这是个新世界 the new world 这是个新世界 the new world 这是个新世界 the new world 这是个新世界 the new world 这是个新世界 the new world 这是个新世界 the new world </p>
+				<a href="#">更多详情</a>
+				<ul>
+					<li></li>
+					<li class="li-mid"></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</section>
+	<section class="newTime">
+		<div class="newTime_content">
+			<div class="newTimeDiv newTime_1">
+				<h3>新时代</h3>
+				<p>关于爱生活的我们</p>
+				<div></div>
+				<a href="#">查看更多</a>
+			</div>
+			<div class="newTimeDiv newTime_2">
+				<h3>爱自己</h3>
+				<p>关于爱生活的我们</p>
+				<div></div>
+				<a href="#">查看更多</a>
+			</div>
+			<div class="newTimeDiv newTime_3">
+				<h3>爱生活</h3>
+			</div>
+		</div>
+	</section>
+	<section class="volunteer">
+		<div class="volunteer_content">
+			<div class="banner">
+				<h3>成为我们的志愿者</h3>
+				<div></div>
+				<p>new world ，新世界来了，大家准备好了吗。加入我们，成为改变所有的生活的人</p>
+			</div>
+			<div class="vol">
+			<div class="vol_left">
+				<div class="part_1 part">
+					<h3>新世界协议</h3>
+					<p>加入志愿者必须遵守中华人民共和国的相关法律</p>
+					<a href="#">more</a>
+				</div>
+				<div class="part_2 part">
+					<h3>新世界协议</h3>
+					<p>加入志愿者必须遵守中华人民共和国的相关法律</p>
+					<a href="#">more</a>
+				</div>
+				<div class="part_3 part">
+					<h3>更多条款</h3>
+					<a href="#">more</a>
+				</div>
+			</div>
+			<div class="vol_right">
+				<form action="">
+					<div class="form_c">
+						<span>姓名</span><input type="text" name="name"/>
+					</div>
+					<div class="form_c">
+						<span>年龄</span><input type="text" name="name"/>
+					</div>
+					<div class="form_c">
+						<span>联系方式</span><input type="text" name="name"/>
+					</div>
+					<div class="form_c">
+						<span>联系地址</span><input type="text" name="name"/>
+					</div>
+					<textarea cols="30" rows="10">请说出你的梦想：</textarea>
+					<button type="submit">提交</button>
+				</form>
+			</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+	<div class="footer_bg">
+		<div class="footer_top">
+			<h3>联系我们</h3>
+			<p>快来找我玩，关注我们的动态吧，啦啦啦啦啦。</p>
+			<form>
+				<input type="text" name="submit"/><button>提&nbsp;交</button>
+			</form>
+			<ul class="foot_icon">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<div class="footer_foot">
+			<ul>
+				<li class="left">&copy;2018新世界</li>
+				<li class="right"><a href="#">back to top</a></li>
+			</ul>
+		</div>
+	</div>
+	</footer>
+</div>
+</body>
+<id>

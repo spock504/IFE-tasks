@@ -1,4 +1,4 @@
-# ife2018
+# IFE-2018
 ## day 7-8  
 [页面布局](https://spock504.github.io/IFE-2018/day7-8/task7-8.html)  
 [两栏-右侧固定宽度](https://spock504.github.io/IFE-2018/day7-8/两栏-右侧固定宽度.html)  

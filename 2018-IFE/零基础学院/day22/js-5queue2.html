@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>队头在左侧</title>
+</head>
+<body>
+    
+<div class="btn">
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple&lt;-pear</p>    
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+</div>
+<script>
+
+    var queue = ["apple", "pear"];
+    var text = document.querySelector("#queue-cont");
+    var btn = document.querySelector(".btn");
+    // 添加事件委托
+    btn.onclick = function (e) {
+        var ev = e || window.event;
+        var target = ev.target || ev.srcElement;
+        var input = document.querySelector("#queue-input").value;
+        switch (target.id) {
+            // 入列
+            case "in-btn":
+            if (input !== '') {
+                queue.unshift(input);
+                text.innerHTML =`队列为 ${queue.join('<-')}`;
+            } else  {
+                text.innerHTML = "输入不能为空";
+            }
+                break;
+                // 出列
+            case "out-btn":
+                queue.pop();
+                text.innerHTML =`队列为 ${queue.join('<-')}`;
+                // statements_def
+                break;
+                // 列头
+            case "font-btn":
+                text.innerHTML = `队列头为 ${queue[0]}`;
+                break;
+                // 检查是否为空
+            case "empty-btn":
+                var empty = queue.length ===0 ? "队列为空" : "队列不为空";
+                text.innerHTML = empty;
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

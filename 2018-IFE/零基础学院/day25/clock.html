@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+</head>
+<body>
+    <h3>最简单的时钟</h3>
+    <p id="clock1"></p>
+    <p id="clock2"></p>
+
+<section id="textBox">
+<select id="year-select">
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+    <option value="2009">2009</option>
+    <option value="2000">2000</option>
+    <option value="2010">2010</option>
+    <option value="2011">2011</option>
+    <option value="2012">2012</option>
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+</select>
+
+<select id="month-select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+</select>
+
+<select id="day-select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="31">31</option>
+</select>
+
+<select id="hour-select">
+    <option value="0">00</option>
+    <option value="1">01</option>
+    <option value="23">23</option>
+</select>
+
+<select id="minite-select">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option>59</option>
+</select>
+
+<select id="second-select">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option>59</option>
+</select>
+</section>
+<p id="result-wrapper"><span></span><span></span><span></span></p>
+<script>
+    // 事件单元
+let EventUtil = {
+    addHandler: function (element, type, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(type, handler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent("on" + type, handler);
+        } else {
+            element["on" + type] = handler;
+        }
+    },
+    getEvent: function (event) {                      //跨浏览器获取event对象
+        return event ? event : window.event;
+    },
+    getTarget: function (event) {                     //跨浏览器获取作用对象
+        return event.target || event.srcElement;
+    }
+};
+      var week = ['日', '一', '二', '三', '四', '五', '六'];
+      var weekEn = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        // 数字小于10，则加上0
+    function checkTime(t) {
+        if (t < 10) {
+            t ="0" + t
+        }
+        return t;
+    }
+    //根据日期返回这一天是星期几 ,这两个函数应该可以合并
+    function checkWeek1(w){
+        var ww = week[w];
+        return ww;
+    }
+    function checkWeek2(w){
+        var WW = weekEn[w];
+        return WW;
+    }
+    // AM和PM
+    function checkHours(h) {
+        var hs;
+        h<=12 ? hs="AM" : hs="PM";
+        return hs
+    }
+    function startTime(){
+        var date = new Date();
+        var y = date.getFullYear();
+        var mon = date.getMonth();
+        var d = date.getDate();
+        var w = date.getDay();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var text1 = document.getElementById("clock1");
+        var text2 = document.getElementById("clock2");
+        //规范化输出
+        mon=checkTime(mon+1);
+        d=checkTime(d);
+        w1=checkWeek1(w);
+        w2=checkWeek2(w);
+        hh=checkHours(h);
+        m=checkTime(m);
+        s=checkTime(s);
+        text1.innerHTML = y+"年"+mon+"月"+d+"日 "+"星期"+w1+" "+h + ":" + m + ":"+s+" "+hh;
+        text2.innerHTML = y+"-"+mon+"-"+d+" "+w2+" "+h + ":" + m + ":"+s+" "+hh;
+        setTimeout("startTime()", 1000);
+    }
+// 当变更任何一个select选择时，更新 result-wrapper 的内容
+// 当所选时间早于现在时间时，文案为 现在距离 "所选时间" 已经过去 xxxx
+// 当所选时间晚于现在时间时，文案为 现在距离 "所选时间" 还有 xxxx
+// 注意当前时间经过所选时间时候的文案变化
+// 注意选择不同月份的时候，日期的可选范围不一样，比如1月可以选31天，11月只有30天，注意闰年
+
+// ########################任务四
+// 事件委托，按钮的改变事件
+let choiceYear = 1970;
+let choiceMonth = 0;
+let choiceDate = 1;
+let choiceHours = 0;
+let choiceMinutes = 0;
+let choiceSeconds =0;
+let changeDate = 0;
+let yearSelect = document.getElementById("year-select");
+let monthSelect = document.getElementById("month-select");
+let choiceTime = new Date(1970, 0, 0, 0, 0, 0);
+
+
+var time3 = document.querySelector("#result-wrapper span:nth-child(3)");
+var Box = document.querySelector("#textBox");
+Box.onchange = function(e) {
+    var ev = e || window.event;
+    var target = ev.target || srcElement;
+    // 选项的值
+    var option = checkedVal(target.id); 
+    var t = document.querySelector("#result-wrapper span:nth-child(1)");
+    switch (target.id) {
+        case "year-select":
+            choiceYear = option;
+            break;
+        case "month-select":
+            choiceMonth = option-1;
+            break;
+        case 'day-select':
+            choiceDate = option;
+            break;
+        case 'hour-select':
+            choiceHours = option;
+            break;
+        case 'minite-select':
+            choiceMinutes = option;
+            break;
+        case 'second-select':
+            choiceSeconds = option;
+            break;
+        default:
+            break;
+    }
+    //获取相应月份的天数
+    getDay(choiceMonth);
+    console.log();
+    t.innerHTML = ` ${choiceYear}年${choiceMonth+1}月${checkTime(choiceDate)}日 ${checkTime(choiceHours)}:${checkTime(choiceMinutes)}:${checkTime(choiceSeconds)} `;
+}
+// 选项改变后就返回改变后的值
+function checkedVal(id) {
+    let option = document.getElementById(id).querySelectorAll("option");
+    let val = 0;
+    for (let index = 0; index < option.length; index++) {
+        if (option[index].selected) {   
+            return option[index].value;
+        }
+    }
+}
+// 封装一个函数，把最后的日期时间，按照要求的格式进行包装
+function isTime3() {
+    let day = new Date();
+    choiceTime = new Date(choiceYear, choiceMonth, choiceDate, checkTime(choiceHours), checkTime(choiceMinutes), checkTime(choiceSeconds));
+
+    let t = (day.getTime() - choiceTime.getTime()) / 1000;  
+    // 一天86400秒
+    let date = Math.floor(Math.abs(t / 86400));
+    let hours = Math.floor(Math.abs(t % 86400 / 3600));
+    let minutes = Math.floor(Math.abs(t % 3600 / 60));
+    let seconds = Math.floor(Math.abs(t % 60));
+    
+    pastOrPresent(t);
+
+    time3.innerHTML = ` ${Math.abs(date)}天 ${checkTime(hours)}小时 ${checkTime(minutes)}分 ${checkTime(seconds)}秒`;
+    setTimeout("isTime3()", 1000);
+
+}
+// 当更改月份的时候判断天数
+// EventUtil.addHandler(monthSelect, "change", function(){
+//     setTimeout(() => {
+//         createDay(changeDate);
+//     }, 30);
+// });
+// // 当更改年份的时候判断天数  都怪坑爹的二月份
+// EventUtil.addHandler(yearSelect, "change", function () {
+//     setTimeout(() => {
+//         createDay(changeDate);
+//     }, 30);
+// });
+// // 创建单日元素
+// function createDay(n) {
+//     let day = document.getElementById("day-select");
+//     day.innerHTML = '';
+    
+//     for (let index = 1; index <= n; index++) {
+
+//         let option = document.createElement("option");
+//         option.innerText = index;
+//         option.value = index;
+//         day.appendChild(option);
+//     }
+// }
+// 判断时间是超过了当前时间还是没有到达当前时间，改变文案
+function pastOrPresent(date) {
+    let text = document.querySelector("#result-wrapper span:nth-child(2)");
+    if (date >= 0) {
+        text.innerText = "已经过去";
+    } else {
+        text.innerText = "还有";
+    }
+}
+// 获得不同月份下的不同月数，
+function getDay(n) {
+    var anum = parseInt(n);
+    var num = 0;
+    switch (anum) {
+        case 1:
+            // 闰年二月为29天
+            if (choiceYear%4 === 0 && choiceYear%100 !== 0) {
+                num = 29;
+            } else {
+                num = 28;
+            }
+            // 31天的月份
+        case 0:
+        case 2:
+        case 4:
+        case 6:
+        case 7:
+        case 9:
+        case 11:
+            num = 31;
+            break;
+        case 3:
+        case 5:
+        case 8:
+        case 10:
+            num =30;
+            break;
+        default:
+            break;
+    }
+    changeDate = num;
+}
+isTime3();
+    window.onload =function(){
+        startTime();
+    }
+</script>
+
+</body>
+</html>

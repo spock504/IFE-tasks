@@ -1,0 +1,527 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+div.main {
+	width: 1170px;
+	height: 100%;
+	margin: 0 auto;
+}
+nav {
+	height: 55px;
+	overflow: hidden;
+}
+nav div.new-world {
+	float: left;
+	font:bold 20px "黑体";
+	margin:20px 0px 20px 100px;
+}
+nav ul {
+	float: right;
+	margin: 20px 0px;
+}
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin-right: 30px;
+}
+nav ul li a {
+	color: grey;
+	font: 14px "微软雅黑";
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: #E74E4D;
+	border-bottom: 5px solid #E74F4D;
+	padding-bottom: 10px;
+}
+/*单独设置登入标签的颜色，并且去除悬停时的样式*/
+nav ul li:last-child a {
+	color: #E74F4D;
+}
+nav ul li:last-child a:hover {
+	border: none;
+}
+
+/*---------图片和按钮--------*/
+.bg_image {
+	text-align: center;
+	width: 100%;
+	height: 854px;
+	background-color: #fff;
+	position: relative;
+}
+.bg_image img {
+	width: 1170px;
+	height: 654px;
+	margin: 0 auto;
+}
+.bg_but {
+	position: absolute;
+	display: block;
+	left: 125px;
+	bottom: 331px;
+	width: 290px;
+	height: 65px;
+	background-color: #E74F4D;
+	color: white;
+	font: 1.5em "微软雅黑";
+	text-align: center;
+	text-decoration: none;
+}
+div.list ul{
+	list-style: none;
+	padding: 50px 0;
+}
+div.list li {
+	border-left: 2px solid grey;
+	height: 50px;
+	width: 25%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	float: left;
+	padding: 10px 68px;
+	font: 14px "黑体";
+	color: #767677;
+}
+div.list li.first_child {
+	border: none;
+}
+ div.gray_content {
+ 	width: 100%;
+ 	height: 200px;
+ 	text-align: center;
+ 	background-color: #EDECEC;/*背景色怎么不能设置？？...写错符号了*/
+ }
+div.gray_content h3 {
+	font: bold 54px "黑体";
+	opacity: 0.5;
+	vertical-align: bottom;
+	padding-top: 100px;
+}
+
+/*城市*/
+section.city {
+	width: 1170px;
+	height: 100px;
+	background: rgba(170, 52, 50, 0.2);
+	padding: 160px 0;
+}
+
+div.city_form ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+div.city_form ul li {
+	width: 236px;
+	height: 36px;
+	float: left;
+	background-color: #fff;
+	border: 1px solid #BE4E48;
+	text-align: left;
+	line-height: 36px;
+	padding-left: 10px;
+	margin:0 20px;
+	position: relative; /*position定位 对于list有帮助*/
+}
+div.city_form ul li span {
+	font: 14px "黑体";
+	color: #A8A9AA;
+}
+li#input_btn {
+	background-color: #BE4E48;
+	color: #fff;
+	text-align: center;
+	font: 16px "黑体";
+	line-height: 36px;
+	border: none;
+	margin: 0;
+}
+div.city-list {
+	position: absolute;
+	overflow: hidden;
+	top: 35px;
+	left: 0;
+	background-color: #E3E3E4;
+	width: 234px;
+	display: none; /*列表默认隐藏起来*/
+}
+div.city-list a {
+	display: block;
+	width: 236px;
+	height: 30px;
+	text-align: left;
+	padding-left: 25px;
+	color: #323232;
+	line-height: 30px;
+	cursor: default;
+	font: 12px "微软雅黑";
+	text-decoration: none;
+}
+div.city-list a:hover {
+	color: #fff;
+	background-color: #BE4E48;
+}
+div.city_form ul li:hover .city-list {
+	display: block; /*滑动过li列表后，显示为块*/
+}
+
+/*-------------活动------------*/
+.activity_content {
+	text-align: center;
+	width: 1170px;
+	height: 500px;
+	padding: 84px 0 83px;
+}
+.activity_content ul {
+	list-style: none;
+	display: inline-block;/*父元素设置 center,只有下面的子元素设置为内联块才能起作用*/
+}
+.activity_content ul li {
+	margin-right: 40px;
+	float: left;
+}
+.activity_content ul li h3 {
+	font: 1.2em "黑体";
+	color: black;
+	margin: 0;
+	padding: 1em 0;
+}
+.activity_content ul li p {
+	padding: 1em 0;
+	font: 0.8em "微软雅黑";
+	color: #A8A9AA;
+	margin: 0;
+}
+.activity_content ul li .activity_s {
+	width: 203px;
+	text-align: justify;
+	font: 1.8em "微软雅黑";
+	padding: 0 11px;
+}
+.activity_content ul li .activity_s::after{
+	display: inline-block;
+	content: "";
+	overflow: hidden;
+	height: 0;
+	width: 100%;
+}
+.activity_content ul li .activity_img {
+	width: 203px;
+	height: 300px;
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+/*-----------新世界---------*/
+.newWorld_content {
+	width: 1170px;
+	height: 420px;
+}
+.newWorld_content .new_left {
+	float: left;
+	width: 75%;
+	height: 100%;
+	border: 1px solid grey;
+}
+.newWorld_content .new_right {
+	text-align: center;
+	margin: 0 auto;
+	padding: 100px 0 101px;
+}
+.newWorld_content .new_right h3{
+	font: 16px "微软雅黑";
+	color: #202421;
+}
+.newWorld_content .new_right h3 span {
+	color: #D52B2B;
+}
+.newWorld_content .new_right p {
+	font: 12px "微软雅黑";
+	color: #808080;
+	padding-top: 15px;
+	margin: 0 0 40px 0;
+	text-align:justify;
+}
+.newWorld_content .new_right a {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	border: 1px solid #CC3333;
+	padding: 6px 12px;
+	font: 14px "黑体";
+	color: #CC3333;
+	background-color: white;
+}
+.newWorld_content .new_right a:hover {
+	color: #fff;
+	background-color: #BE4E48;
+}
+.newWorld_content .new_right ul {
+	text-decoration: none;
+	margin: 20px 0 0;
+}
+.newWorld_content .new_right ul li {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
+	border: 1px solid #999;
+	background-color: #999;
+	cursor: pointer;
+}
+/*选择紧接在第一个li后的所有li元素*/
+.newWorld_content .new_right ul>li+li {
+	background-color: #fff;
+}
+.newWorld_content .new_right ul .li-mid {
+	margin: 0 10px;
+}
+
+/*-----------新时代----------*/
+section.newTime {
+	width: 1170px;
+	height: 521px;
+	overflow: hidden;
+}
+div.newTimeDiv {
+	float: left;
+	width: 380px;
+	height: 521px;
+	text-align: center;
+	padding: 185px 0;
+	border: 1px solid pink;
+}
+div.newTimeDiv h3,p {
+	font: bold 16px "微软雅黑";
+	margin-top: 5px;
+}
+.newTime_1 h3 {
+	color: #fff;
+}
+.newTime_1 p {
+	color: #fff;
+}
+div.newTimeDiv div {   /*中间短横线的设置*/
+	width: 31px;
+	height: 3px;
+	margin: 20px auto;
+}
+.newTime_1 div {
+	background-color: #fff;
+}
+.newTime_2 div {
+	background-color: #333;
+}
+
+div.newTimeDiv a {
+	margin: 0 auto;
+	width: 170px;
+	height: 35px;
+	padding: 6px 15px;
+	font: 21px "微软雅黑";
+	display: block;
+}
+.newTime_1 a {
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #fff;
+}
+.newTime_1 a:hover {
+	color: #333;
+	background-color: #fff;
+}
+.newTime_2 a {
+	text-decoration: none;
+	color: #DD2222;
+	background-color: #fff;
+	border: 1px solid #DD2222;
+}
+.newTime_2 a:hover {
+	color: #FFF;
+	background-color: #DD2222;
+}
+div.newTime_1 {
+	background-color: #DD2222;
+}
+.volunteer_content .banner {
+	text-align: center;
+	margin-top: 54px;
+}
+.banner h3 {
+	font: 1.4em "黑体";
+	color: #222;
+}
+.banner div {
+	display: inline-block;
+	width: 36px;
+	height: 3px;
+	background-color: #DD2222;
+}
+.banner p {
+	margin: 10px auto; /*需要设置margin的居中，不然设置了宽度会左对齐*/
+	width: 280px	;
+	color: #808080;
+	font: 0.8em "微软雅黑";
+	text-align: center;
+	margin-bottom: 60px;
+}
+.vol {
+	height: 380px;
+}
+.vol_left {
+	width: 320px;
+	float: left;
+	border: 1px solid #808080;
+	padding: 36px;
+}
+.vol_left .part {
+	clear: both;
+	margin: 25px auto;
+}
+.vol_left .part h3 {
+	font: 1.2em "黑体";
+	color: #333333;
+	margin-top: 4	0px;
+}
+.vol_left .part p {
+	font: 0.8em "微软雅黑";
+	color: #808080;
+	margin: 10px auto;
+}
+.vol_left .part a {
+	float: right;
+	text-decoration: none;
+	font: 0.6em "黑体";
+	color: #808080;
+}
+.vol_right form .form_c {
+	display: inline-block; /*可以水平有两个排列*/
+	width: 300px;
+	height: 40px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.vol_right form .form_c span {
+	width: 60px;
+	height: 40px;
+	background-color: #EDEDEF;
+	font: 12px "微软雅黑";
+	color: #221814;
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 40px;
+	text-align: center;
+}
+.vol_right form .form_c input {
+	width: 225px;
+	height: 40px;
+	background-color: #EDEDEF;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-left: 15px;
+	border: 0;
+}
+.vol_right form textarea {
+	width: 625px;
+	height: 120px;
+	background-color: #EDEDEF;
+	font: 0.8em "微软雅黑";
+	color: #221814;
+	resize: none;
+	margin-left: 40px;
+	padding: 10px;
+	border: none;
+}
+.vol_right form button {
+	border: none;
+	margin-left: 40px; /*设置为block块，就不能设置margin-left，可是还可以设置margin-top*/
+	margin-top: 10px;
+	width: 645px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #EDEDEF;
+	color: #221814;
+	text-align: center;
+	cursor: pointer;
+}
+
+.footer_bg {
+	width: 100%;
+	height: 380px;
+	background-color:#32353E; 
+	position: relative;
+}
+footer .footer_top {
+	text-align: center;
+}
+footer .footer_top h3 {
+	font: 1.4em "黑体";
+	color: #fff;
+	padding-top: 60px;
+}
+footer .footer_top p {
+	font: 0.8em "微软雅黑";
+	color: #fff;
+	margin: 20px auto;
+}
+footer .footer_top form input {
+	width: 400px;
+	height: 30px;
+	border: 1px solid #32353E;
+	background-color: #fff;
+}
+footer .footer_top form button {
+	width: 60px;
+	height: 31px;
+	line-height: 31px;
+	color: #fff;
+	font-size: 13px;
+	border: 0;
+	background-color: #6F7178;
+	cursor: pointer;
+}
+footer .footer_top ul li {
+	display: inline-block;
+	list-style: none;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+footer .footer_foot {
+	position: absolute;
+	background-color: #221814;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+footer .footer_foot li {
+	list-style: none;
+	color: #fff;
+	font: 0.8em "黑体";
+}
+footer .footer_foot .left{
+	float: left;
+	padding-left: 20px;
+	padding-top: 10px;
+
+}
+footer .footer_foot .right {
+	float: right;
+}
+footer .footer_foot .right a{
+	color: #fff;
+	padding-right: 20px;
+	display: inline-block;
+	padding-top: 10px;
+	text-decoration: none;
+}
